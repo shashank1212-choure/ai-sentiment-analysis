@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Sentiment Analysis</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+            color: white;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        nav h2 {
+            color: #c7d2fe;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #a5b4fc;
+        }
+
+        .hero {
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .card h3 {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .company {
+            margin-bottom: 30px;
+        }
+
+        select {
+            margin-top: 12px;
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            font-size: 16px;
+        }
+
+        .info {
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .demo {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: rgba(99,102,241,0.2);
+            color: #c7d2fe;
+            font-size: 12px;
+        }
+
+        @media (max-width: 800px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+        <h2>🤖 AI Sentiment Analysis</h2>
+
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/">Analyze</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/about">About</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Dashboard</h1>
+        <p>Overview of sentiment analysis and company review data.</p>
+        <span class="demo">Demo Data</span>
+    </div>
+
+    <div class="company card">
+        <h3>Select Company</h3>
+
+        <select>
+            <option>Amazon</option>
+            <option>Flipkart</option>
+            <option>Apple</option>
+            <option>Samsung</option>
+            <option>Netflix</option>
+            <option>Zomato</option>
+            <option>Swiggy</option>
+            <option>Myntra</option>
+            <option>Uber</option>
+        </select>
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Total Reviews</h3>
+            <div class="number">1,250</div>
+        </div>
+
+        <div class="card">
+            <h3>Positive Reviews</h3>
+            <div class="number">820</div>
+        </div>
+
+        <div class="card">
+            <h3>Negative Reviews</h3>
+            <div class="number">430</div>
+        </div>
+
+        <div class="card">
+            <h3>Positive Rate</h3>
+            <div class="number">65.6%</div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h3>About Dashboard</h3>
+
+        <p class="info">
+            This dashboard provides a simple overview of review sentiment.
+            Users can select a company and analyze customer reviews using
+            the machine learning sentiment analysis system.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
